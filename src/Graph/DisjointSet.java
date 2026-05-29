@@ -1,7 +1,6 @@
-package DSA
+package Graph;
 
 public class DisjointSet {
-    public class DisjointSet {
         int[] parent;
 
         DisjointSet(int v){
