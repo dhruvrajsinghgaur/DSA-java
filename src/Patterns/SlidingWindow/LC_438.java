@@ -56,15 +56,10 @@ public class LC_438 {
 
     void main(String[] args){
 
-        String s = "abaacbabc";
+        String s = "0p0";
         String p = "abc";
 
-        System.out.println(findAnagrams(s, p));
-
-//        String str = "ABCD BCDA";
-//
-//        System.out.println(hasAnagram(str));
-
+        System.out.println(findAnagrams(s, p));;
 
     }
 
@@ -92,4 +87,5 @@ public class LC_438 {
         }
         return "NO ANAGRAM";
     }
+
 }

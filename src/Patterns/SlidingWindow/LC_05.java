@@ -31,9 +31,8 @@ public class LC_05 {
         }
        return right - left - 1;
     }
-
     public static void main(String[] args){
-        String str = "babad";
-        System.out.println(longestPalindrome(str));
+      String str = "babad";
+      System.out.println(longestPalindrome(str));
     }
 }
