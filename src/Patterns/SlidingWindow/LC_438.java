@@ -56,7 +56,7 @@ public class LC_438 {
 
     void main(String[] args){
 
-        String s = "0p0";
+        String s = "abcd";
         String p = "abc";
 
         System.out.println(findAnagrams(s, p));;
