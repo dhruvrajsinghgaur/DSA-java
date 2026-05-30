@@ -1,10 +1,5 @@
 package Patterns.SlidingWindow;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 public class LC_76 {
     public String minWindow(String s, String t) {
         if (s.length() < t.length()) return "";
