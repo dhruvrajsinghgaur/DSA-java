@@ -1,7 +1,7 @@
 package Recursion;
 public class Fibonacci {
       public static void main(String[] args) {
-     System.out.println(fiboformula(6));
+     System.out.println(fiboformula(999));
 
     }
       static int fiboformula(int n){
@@ -21,16 +21,29 @@ public class Fibonacci {
         return fibonacci(n-1)+fibonacci(n-2);
       }
 
-      static int fibo(int n){
-        if (n <= 1) return n;
-        int a = 0;
-        int b = 1;
-        int c = 0;
-        for (int i = 0; i < n; i++) {
-          c = a + b;
-          a = b;
-          b = c;
-        }
-        return c;
+
+    public int fibo(int n){
+      int[] dp = new int[n + 1];
+
+      dp[0] = 0;
+      dp[1] = 1;
+
+      for (int i = 2; i <= n; i++) {
+        dp[i] = dp[i - 1] + dp[i - 2];
       }
+      return dp[n];
+    }
+
+    public int fibo1(int n){
+      int dp0 = 0;
+      int dp1 = 1;
+      int dpn = 0;
+      for (int i = 2; i <= n; i++) {
+        dpn = dp1 + dp0;
+        dp0 = dp1;
+        dp1 = dpn;
+      }
+      return dpn;
+    }
+
 }

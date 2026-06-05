@@ -1,5 +1,7 @@
 package Patterns.TwoPointer;
 
+import java.util.Arrays;
+
 public class LC_125 {
 
     // TC: O(n).
