@@ -24,7 +24,6 @@ public class LC_560 {
         }
         return count;
     }
-
     public int subarraySum1(int[] nums, int k) {
         int[] prefixSum = new int[nums.length];
         prefixSum[0] = nums[0];
