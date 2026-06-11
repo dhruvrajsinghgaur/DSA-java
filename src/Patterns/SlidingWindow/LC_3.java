@@ -1,10 +1,38 @@
 package Patterns.SlidingWindow;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-public class LC_4 {
+public class LC_3 {
+
+    // Method 1.
+    // TC: O(n).
     public static int lengthOfLongestSubstring(String s){
+        Map<Character, Integer> map = new HashMap<>();
+
+        int left = 0;
+        int maxLen = 0;
+
+        for (int right = 0; right < s.length(); right++) {
+
+            char ch = s.charAt(right);
+
+            if (map.containsKey(ch)){
+                left = Math.max(left, map.get(ch) + 1);
+            }
+
+            map.put(ch, right);
+            maxLen = Math.max(maxLen, right - left + 1);
+        }
+        return maxLen;
+    }
+
+    // Method 2.
+    // TC: O(n*k).
+    // TC: O(n^2) in worst case.
+    public static int lengthOfLongestSubstring1(String s){
         List<Character> charArr = new ArrayList<>();
         int maxLength = 0;
         int sPointer = 0;
