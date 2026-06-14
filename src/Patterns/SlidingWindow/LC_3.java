@@ -84,6 +84,7 @@ public class LC_3 {
         }
         return maxLength;
     }
+
     private static int indexFinder(char ch, String str){
         for (int i = 0; i < str.length(); i++) {
             if (str.charAt(i) == ch) return i;
@@ -95,6 +96,5 @@ public class LC_3 {
         String s = "anviaj";
         System.out.println(lengthOfLongestSubstring(s));
     }
-
 
 }
