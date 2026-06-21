@@ -5,7 +5,7 @@ public class BinaryTree {
     private Node root;
     public BinaryTree(){
     }
-  private static class Node {
+    private static class Node {
     int value;
     Node left;
     Node right;
