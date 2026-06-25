@@ -1,12 +1,5 @@
 package Trees;
 
-import LinkedList.DoublyLL;
-import com.sun.source.tree.Tree;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-
 public class LC_99 {
     public void recoverTree(TreeNode root) {
         inorder(root);
@@ -33,9 +26,5 @@ public class LC_99 {
         prev = curr;
 
         inorder(node.right);
-    }
-
-    void main(){
-
     }
 }

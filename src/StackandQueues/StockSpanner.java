@@ -36,7 +36,7 @@ public class StockSpanner{
 }
 
 // This solution class revisits even those prices which are already visited
-// In worst case like strictly increasing prices or increasing prices TC will become O(n^2)
+// In worst cases like strictly increasing prices or increasing prices TC will become O(n^2)
 class StockSpanner1 {
 
     List<Integer> list;
