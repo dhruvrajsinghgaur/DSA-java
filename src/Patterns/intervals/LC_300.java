@@ -1,7 +1,6 @@
 package Patterns.intervals;
 
 import java.util.Arrays;
-import java.util.List;
 
 public class LC_300 {
 
