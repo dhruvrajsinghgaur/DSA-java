@@ -1,4 +1,4 @@
-package Patterns.intervals;
+package Patterns.DP;
 
 import java.util.List;
 
