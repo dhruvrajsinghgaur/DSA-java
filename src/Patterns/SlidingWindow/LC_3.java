@@ -7,8 +7,9 @@ import java.util.Map;
 
 public class LC_3 {
 
-    // Method 1.
+    // Method 0.
     // TC: O(n).
+    // SC: O(n).
     public static int lengthOfLongestSubstring(String s){
         Map<Character, Integer> map = new HashMap<>();
 
@@ -29,10 +30,37 @@ public class LC_3 {
         return maxLen;
     }
 
+    // Method 1.
+    // TC: O(n^2).
+    // SC: O(n).
+    public static int lengthOfLongestSubstring1(String s) {
+        Map<Character, Integer> map = new HashMap<>();
+
+        int globalMaxLen = 0;
+        for (int left = 0; left < s.length(); left++) {
+
+            int maxLen = 0;
+            for (int right = left; right < s.length(); right++) {
+
+                char ch = s.charAt(right);
+
+                if (map.containsKey(ch)) {
+                    map.clear();
+                    break;
+                }
+
+                map.put(ch, right);
+                maxLen = Math.max(maxLen, right - left + 1);
+            }
+            globalMaxLen = Math.max(globalMaxLen, maxLen);
+        }
+        return globalMaxLen;
+    }
+
     // Method 2.
     // TC: O(n*k).
     // TC: O(n^2) in worst case.
-    public static int lengthOfLongestSubstring1(String s){
+    public static int lengthOfLongestSubstring2(String s){
         List<Character> charArr = new ArrayList<>();
         int maxLength = 0;
         int sPointer = 0;
