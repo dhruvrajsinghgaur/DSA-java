@@ -25,7 +25,7 @@ public class Trie {
         char[] wordArr = word.toCharArray();
         for (char ch : wordArr) {
             int index = ch - 'a';
-            if (curr.childrens[index] == null) return true;
+            if (curr.childrens[index] == null) return false;
             curr = curr.childrens[index];
         }
         return curr.isEnd;
@@ -37,7 +37,7 @@ public class Trie {
 
         for (char ch : wordArr) {
             int index = ch - 'a';
-            if (curr.childrens[index] == null) return true;
+            if (curr.childrens[index] == null) return false;
             curr = curr.childrens[index];
         }
         return true;
