@@ -92,6 +92,6 @@ public class LC_212 {
 
         List<String> result = solution.findWords(board, words);
 
-        System.out.print(result);
+        System.out.println(result);
     }
 }
